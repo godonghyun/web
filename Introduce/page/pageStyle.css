@@ -1,0 +1,28 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #EEDBD8;
+    scroll-behavior: smooth;
+}
+
+:root {
+    
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.banner {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

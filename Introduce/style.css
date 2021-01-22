@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fjord+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
+
+:root {
+    --background-color: #EEDBD8;
+    --color-1: #F0E7E5;
+    --color-2: #EEDBD8;
+    --color-3: #E8D0D0;
+    --color-4: #C6AFC6;
+    --color-5: #9C93B5;
+    --color-6: #5B6C93;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+    overflow: hidden;
+    background-color: var(--background-color)
+}
+
+body::before {
+    content: "";
+    background-image: url(img/background.jpg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    z-index: -3;
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-4);
+    mix-blend-mode: overlay;
+    opacity: 0.8;
+    z-index: -2;
+}
+
+.main-page {
+    width: 100vw;
+    height: 100vh;
+
+    padding: 5%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+
+}
+
+.profile-box {
+    width: 40%;
+    height: 100%;
+    filter: drop-shadow(0px 0px 10px var(--color-5));
+    color: var(--color-1);
+}
+
+.profile-box .card-area {
+    width: 100%;
+    height: 100%;
+
+    border-radius: 3%;
+    background-color: rgba(156, 147, 181, 0.6);
+
+    clip-path: polygon(0% 0%,
+            100% 0%,
+            100% 95%,
+            95% 100%,
+            0% 100%);
+
+    position: relative;
+    z-index: 3;
+}
+
+.profile-box .deco-box{
+    position: relative;
+    top: -30%;
+    left: -15%;
+
+    width: 20%;
+    background-color: rgba(232, 208, 208, 0.6);
+    border-radius: 30%;
+
+    z-index: 2;
+}
+
+.profile-box .deco-box::after{
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+
+.profile-box header {
+    height: 20%;
+    display: flex;
+    align-items: center;
+}
+
+.profile-box header h1 {
+    margin-left: 7%;
+
+    font-family: 'Work Sans', sans-serif;
+    color: var(--color-3);
+    transform: scale(0.95, 1);
+    letter-spacing: 3px;
+    text-decoration: underline;
+    text-decoration-color: var(--color-3);
+    text-underline-offset: 3px;
+}
+
+.profile-box section {
+    height: 65%;
+    width: 80%;
+    margin: 5% 10%;
+    padding: 1% 3%;
+    border-radius: 5px;
+    border-right: 3px solid var(--color-2);
+
+    color: var(--color-2);
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.profile-box section h1{
+    font-family: 'Fjord One', serif;
+    font-weight: none;
+    font-size: 1em;
+    padding-bottom: 5px;
+    border-bottom: 2px ridge var(--color-2);
+}
+.profile-box section .section-top h1{
+    font-size: 1.8em;
+    transition: transform 0.7s ease;
+}
+.profile-box section .section-top h1:hover{
+    transform: scale(1.1);
+    color: var(--color-3);
+}
+.profile-box section p{
+    font-size: 1em;
+    text-indent: 0.7em;
+    line-height: 1.7em;
+    font-family: 'Nanum Myeongjo', serif;
+}
+.profile-box section .section-top p{
+    font-family: 'Fjord One', serif;
+    margin-top: 5px;
+    font-size: 1em;
+}
+
+.profile-box .section-top{
+    width: 100%;
+    height: 30%;
+    
+    display: flex;
+    justify-content: flex-end;
+}
+
+.profile-box .section-top .profile-name{
+    padding-right: 20px;
+    text-align: right;
+}
+
+.profile-box .section-top .profile-image{
+    position: relative;
+    height: 100%;
+
+    display: inline-block;
+    padding: 10px;
+    background-color: rgba(240, 231, 229, 0.6);
+    border-radius: 10%;
+
+    z-index: 4;
+}
+
+.profile-box .section-top .profile-image img{
+    position: relative;
+    height: 100%;
+}
+
+.profile-box .section-bottom{
+    width: 100%;
+    height: 70%;
+    
+    margin: 5% 0%;
+    padding: 1% 5%;
+    border-radius: 5px;
+    border-right: 3px solid var(--color-3);
+    border-left: 3px solid var(--color-3);
+}
+
+.profile-box footer {
+    position: relative;
+    height: 5%;
+    bottom: -1%;
+}
+
+.profile-box footer button {
+    position: relative;
+    height: 100%;
+    width: 5%;
+    left: 95%;
+
+    background-color: var(--color-4);
+
+    border-top-left-radius: 40%;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+
+.content-box {
+    width: 40%;
+    height: 100%;
+    position: relative;
+}
+
+.content-box iframe {
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+    max-height: 40%;
+    box-shadow: 0px 0px 20px var(--color-4);
+    scroll-behavior: smooth;
+    transition: max-height 0.7s ease-out 0s;
+}
+
+.content-box iframe.show {
+    max-height: 100%;
+}
+
+.top-blur,
+.bottom-blur {
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    opacity: 0;
+    z-index: 2;
+    transition: all 0.5s ease-out 0s;
+}
+
+.top-blur {
+    top: -10%;
+    background: linear-gradient(to bottom,
+            var(--background-color) 50%,
+            rgba(0, 0, 0, 0) 100%);
+}
+
+.bottom-blur {
+    bottom: -10%;
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0) 0%,
+            var(--background-color) 50%);
+}
+
+.top-blur.show {
+    opacity: 1;
+}
+
+.bottom-blur.show {
+    opacity: 1;
+}
+
+.nav-box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 40%;
+
+    transition: top 0.7s ease-out 0s;
+    /* background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0) 0%,
+            var(--background-color) 50%); */
+}
+
+.nav-box.hide {
+    top: 100%;
+}
+
+.nav-bar {
+    position: relative;
+    width: 70%;
+    height: 20%;
+    top: 20%;
+    left: 15%;
+
+    outline: none;
+    transition: all 1s ease-out;
+}
+
+.nav-bar.hide {
+    opacity: 0;
+}
+
+.nav-bar input[type=range] {
+    width: 100%;
+}
+
+.nav-bar datalist {
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+
+    /**/
+    user-select: none;
+    pointer-events: none;
+}
+
+.nav-var data option {}
