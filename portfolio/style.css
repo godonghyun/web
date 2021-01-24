@@ -89,7 +89,7 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 110px 100px;
+    padding: 110px 20%;
     background-color: #fff;
 }
 
