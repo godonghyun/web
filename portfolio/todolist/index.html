@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
@@ -10,11 +11,13 @@
 </head>
 
 <body>
-    <div class="js-clock">
-        <h1>00:00:00</h1>
-    </div>
-    
-    
+    <div class="loading"></div>
+
+    <div class="content">
+        <div class="js-clock">
+            <h1>00:00:00</h1>
+        </div>
+
         <div class="css-form">
             <form action="" class="js-form form">
                 <input type="text" placeholder="what is your name?" />
@@ -29,7 +32,7 @@
 
         <ul class="js-toDoList">
         </ul>
-
+    </div>
 
     <span class="js-weather"></span>
 
@@ -38,6 +41,14 @@
     <script src="js/todo.js"></script>
     <script src="js/bg.js"></script>
     <script src="js/weather.js"></script>
+    <script>
+        $(window).load(function () {
+            $('.loading').delay(1000).fadeOut();
+            $('.content').delay(2000).queue(function () {
+                $('.content').css('filter', 'none');
+            });
+        })
+    </script>
 </body>
 
 </html>

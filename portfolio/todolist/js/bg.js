@@ -1,4 +1,5 @@
 const body = document.querySelector('body');
+const content = document.querySelector('.content');
 
 const IMG_NUMBER = 3;
 
@@ -8,7 +9,7 @@ function paintImage(imgNumber) {
     const img = new Image();
     img.src = `images/${imgNumber}.jpg`;
     img.classList.add("bgImage");
-    body.appendChild(img);
+    content.appendChild(img);
 }
 
 function genRandom() { // get random number between 0~IMG_NUMBER-1

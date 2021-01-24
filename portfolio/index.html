@@ -1,11 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    Responsive Web Page!
-  </body>
+
+<head>
+    <meta charset="utf-8">
+    <title>Responsive Website design with flexbox</title>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Merienda' rel='stylesheet'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="preload">
+    <header>
+        <h2><a href="#">Saffron</a></h2>
+        <nav>
+            <li><a href="#">Home</a></li>
+            <li><a href="#login">Login</a></li>
+            <li><a href="#todolist">Todo</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </nav>
+    </header>
+
+    <section class="banner-area">
+        <div class="banner-img"></div>
+        <h1>Flexbox Website</h1>
+        <h3 class="dynamic"></h3>
+        <a href="#" class="banner-btn">Contact us</a>
+    </section>
+
+    <section class="portfolio-area" id="login">
+        <h3 class="section-title">Portfolio</h3>
+        <ul class="portfolio-content">
+            <li class="portfolio-left">
+                <div class="screen">
+                    <img src="img/login.png" alt="">
+                    <div class="filter-screen"><p>Login</p></div>
+                    <div class="horizental-screen"></div>
+                    <div class="virtical-screen"></div>
+                </div>
+            </li>
+            <li class="portfolio-right">
+                <h2>login page</h2>
+                <p> 좌우로 흔들리는 애니메이션을 활용한 로그인 페이지 </p>
+                <a href="login/" class="portfolio-btn">Learn more</a>
+            </li>
+        </ul>
+    </section>
+
+    <section class="portfolio-area" id="todolist">
+        <h3 class="section-title">Portfolio</h3>
+        <ul class="portfolio-content">
+            <li class="portfolio-left">
+                <div class="screen">
+                    <img src="img/todolist.png" alt="">
+                    <div class="filter-screen"><p>to do list</p></div>
+                    <div class="horizental-screen"></div>
+                    <div class="virtical-screen"></div>
+                </div>
+            </li>
+            <li class="portfolio-right">
+                <h2>todo list</h2>
+                <p> 애니메이션과 local storage를 이용한 todo list 입니다 </p>
+
+                <a href="todolist/" class="portfolio-btn">Learn more</a>
+            </li>
+        </ul>
+    </section>
+
+    <section class="services-area" id="services">
+        <h3 class="section-title">Services</h3>
+        <ul class="services-content">
+            <li>
+                <i class="fa fa-laptop"></i>
+                <h4>Web Design</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, odit eligendi.</p>
+            </li>
+            <li>
+                <i class="fa fa-signal"></i>
+                <h4>Marketing</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, odit eligendi.</p>
+            </li>
+            <li>
+                <i class="fa fa-picture-o"></i>
+                <h4>Graphics</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, odit eligendi.</p>
+            </li>
+        </ul>
+    </section>
+
+    <section class="contact-area" id="contact">
+        <h3 class="section-title">Contact</h3>
+        <ul class="contact-content">
+            <li>
+                <i class="fa fa-map-marker"></i>
+                <p>247 Westwood Lane <br>Blackfen, UK</p>
+            </li>
+            <li>
+                <i class="fa fa-phone"></i>
+                <p>+123 456 789 <br> +789 456 123</p>
+            </li>
+            <li>
+                <i class="fa fa-envelope"></i>
+                <p>info@saffron.com <br>yourdomain@website.com</p>
+            </li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>All Right Reserved by Your Website</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
 </html>
