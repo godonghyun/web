@@ -1,3 +1,11 @@
+element{
+    --color-1 : #f89b37;
+    --color-2 : #F2CC64;
+    --color-3 : #9ABECF;
+    --color-4 : #3960A1;
+    --color-5 : #192B5D;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -12,6 +20,13 @@ body {
     font-family: poppins;
 }
 
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+}
+
 .preload * {
     transition: none !important;
 }       
@@ -19,14 +34,12 @@ body {
 .main-page{
     width: 100vw;
     height: 100vh;
+    
+    background-color: var(--color-1);
     overflow: hidden;
 }
 
-a {
-    text-decoration: none;
-    cursor: pointer;
-    color: inherit;
-}
+
 
 /* about area */
 
