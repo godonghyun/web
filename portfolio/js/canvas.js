@@ -2,14 +2,14 @@ var c = document.getElementById("background-canvas");
 var ctx = c.getContext("2d");
 var cH;
 var cW;
-var bgColor = "#fab1a0";
+var bgColor = "#ffeaa7";
 var animations = [];
 var circles = [];
 var noMoving = 0;
 var currentTimeout = 0;
 
 var colorPicker = (function () {
-    var colors = ["#fab1a0", "#ffeaa7", "#e17055", "#ff7675"];
+    var colors = ["#ffeaa7", "#fab1a0", "#74b9ff", "#55efc4"];
     var index = 0;
 
     function next() {
@@ -38,8 +38,12 @@ function calcPageFillRadius(x, y) {
 }
 
 function addClickListeners() {
-    document.addEventListener("touchstart", handleEvent);
-    document.addEventListener("mousedown", handleEvent);
+    c.addEventListener("touchstart", handleEvent);
+    c.addEventListener("mousedown", handleEvent);
+    document.querySelector('.banner-text').addEventListener("touchstart", handleEvent);
+    document.querySelector('.banner-text').addEventListener("mousedown", handleEvent);
+    document.querySelector('.banner-title').addEventListener("touchstart", handleEvent);
+    document.querySelector('.banner-title').addEventListener("mousedown", handleEvent);
 };
 
 function handleEvent(e) {
@@ -178,7 +182,7 @@ var resizeCanvas = function () {
     window.addEventListener("resize", resizeCanvas);
     addClickListeners();
 
-    handleInactiveUser();
+    // handleInactiveUser();
 })();
 
 function handleInactiveUser() {
