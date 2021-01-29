@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&display=swap');
 
 :root{
     --color-1 : #FFFAF5;
@@ -121,23 +122,11 @@ button[value=game].stretch ~ #game{
 }
 
 
-button.ball-close{
-    width: 50px;
-    height: 50px;
-    
-    cursor: pointer;
-    border-radius: 100%;
-    outline: 0;
-    border: 5px solid white;
-    background-color: transparent;
-}
-
-
 .content-box{
     position: absolute;
     top: 0;
     left: 0;
-    width: 60vw;
+    width: 50vw;
     height: 60vh;
 
     background: transparent;
@@ -151,8 +140,8 @@ button.ball-close{
     align-items: center;
     
     margin-top: calc(10vh + 140px);
-    margin-left: 20vw;
-    margin-right: 20vw;
+    margin-left: 25vw;
+    margin-right: 25vw;
 
 }
 
@@ -170,22 +159,57 @@ button.ball-close{
 
 .content-box .content-list{
     width: 100%;
+    flex-basis: 50%;
     
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
+.content-box .ball-close{
+    width: 50px;
+    height: 50px;
+    
+    cursor: pointer;
+    border-radius: 100%;
+    outline: 0;
+    border: 5px solid var(--color-1);
+    background-color: transparent;
+}
+
 .content-list .list-left{
-    flex-basis: 40%;
+    flex-basis: 45%;
 }
 
 .content-list .list-left img{
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 3px 3px 5px var(--color-5);
+}
+
+.content-list .list-bar{
+    height: 110%;
+    flex-basis: 0%;
+    border: 2px solid var(--color-1);
+    border-radius: 10%;
 }
 
 .content-list .list-right{
-    flex-basis: 40%;
+    flex-basis: 45%;
+}
+#login .content-list .list-right{
+    color: var(--color-4);
+}
+
+.content-list .list-right h2{
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 40px;
+    padding-bottom: 30px;
+}
+
+.content-list .list-right p{
+    padding-bottom: 30px;
 }
 
 .screen {
