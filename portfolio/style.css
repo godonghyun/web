@@ -7,6 +7,7 @@
     --color-2-1 : #f57600;
     --color-3 : #9ABECF;
     --color-4 : #3960A1;
+    --color-4-1 : #26529e;
     --color-5 : #192B5D;
 }
 
@@ -21,11 +22,13 @@ html {
 }
 
 body {
-    /* position: relative; */
-    width: 100vw;
-    height: 100vh;
-    /* overflow: hidden; */
+
+    /* width: 100vw; */
+    /* height: 100vh; */
+    overflow: hidden;
     background-color: var(--color-1);
+
+    z-index: -5;
 }
 
 a {
@@ -38,11 +41,19 @@ ul, li{
     list-style: none;
 }
 
+#background-canvas{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+
+    z-index: -1;
+}
+
 .preload * {
     transition: none !important;
 }
 
-.banner-text{
+.banner-title{
     position: fixed;
     text-align: center;
     top: 10%;
@@ -54,8 +65,22 @@ ul, li{
     z-index: 5;
 }
 
-.banner-text h1{
+.banner-title h1{
     font-size: 120px;
+}
+
+.banner-text{
+    position: absolute;
+    text-align: center;
+    top: calc(10% + 160px);
+    left: 50%;
+    font-family: 'Courgette', cursive;
+    color: var(--color-4-1);
+    transform: translateX(-50%);
+}
+
+.banner-text p{
+    font-size: 30px;
 }
 
 .content-ball{
@@ -66,8 +91,9 @@ ul, li{
 
     border-radius: 100%;
     outline: 0;
-    border: none;
+    border: 5px solid var(--color-1);
     cursor: pointer;
+    
 
     z-index: 1;
     transition: width 1s ease-in 0s,
@@ -89,19 +115,19 @@ ul, li{
 }
 
 button[value=login]{
-    top: 60%;
+    top: 70%;
     left: calc(30% - 50px);
     background-color: var(--color-2);
 }
 
 button[value=todolist]{
-    top: 60%;
+    top: 70%;
     left: calc(50% - 50px);
     background-color: var(--color-3);
 }
 
 button[value=game]{
-    top: 60%;
+    top: 70%;
     left: calc(70% - 50px);
     background-color: var(--color-4);
 }
@@ -225,7 +251,7 @@ button[value=game].stretch ~ #game{
     padding: 20px;
     font-size: 20px;
     line-height: 35px;
-    text-decoration: underline;
+    text-decoration: underline 1px;
     text-underline-offset: 5px;
     font-family: 'Noto Serif KR', serif;
     box-shadow: 1px 1px 5px gray;
