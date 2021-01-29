@@ -1,5 +1,5 @@
 const el_content_balls = document.querySelectorAll('.content-ball');
-
+const el_close_balls = document.querySelectorAll('.ball-close');
 
 function stretchBall(ball) {
     ball.classList.add('stretch');
@@ -7,26 +7,28 @@ function stretchBall(ball) {
 }
 
 function shrinkBall(ball) {
-    ball.classList.remove('stretch');
-    setTimeout(function () {
-        ball.disabled = false;
-    }, 1000);
-}
+    const stretched_ball = Array.from(el_content_balls).find(item_ball => {
+        return ball.value == item_ball.value;
+    })
 
-function ballClicked(ball) {
-    stretchBall(ball);
+    stretched_ball.classList.remove('stretch');
     setTimeout(function () {
-        shrinkBall(ball);
-    }, 2000);
-    console.log(ball.value);
+        stretched_ball.disabled = false;
+    }, 1000);
 }
 
 function init() {
     el_content_balls.forEach(ball => {
         ball.addEventListener('click', function () {
-            ballClicked(ball);
+            stretchBall(ball);
         });
     });
+
+    el_close_balls.forEach(ball => {
+        ball.addEventListener('click', function () {
+            shrinkBall(ball);
+        });
+    })
 }
 
 init();
