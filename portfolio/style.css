@@ -23,7 +23,7 @@ body {
     /* position: relative; */
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
+    /* overflow: hidden; */
     background-color: var(--color-1);
 }
 
@@ -44,14 +44,17 @@ ul, li{
 .banner-text{
     position: fixed;
     text-align: center;
-    font-size: 60px;
     top: 10%;
     left: 50%;
     transform: translate(-50%,0%);
     font-family: 'Courgette', cursive;
     color: var(--color-5);
-
+    
     z-index: 5;
+}
+
+.banner-text h1{
+    font-size: 120px;
 }
 
 .content-ball{
@@ -63,6 +66,7 @@ ul, li{
     border-radius: 100%;
     outline: 0;
     border: none;
+    cursor: pointer;
 
     z-index: 1;
     transition: width 0.5s ease-in,
@@ -146,9 +150,9 @@ button.ball-close{
     justify-content: space-between;
     align-items: center;
     
-    margin-top: calc(10% + 60px); 
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-top: calc(10vh + 140px);
+    margin-left: 20vw;
+    margin-right: 20vw;
 
 }
 
@@ -157,10 +161,10 @@ button.ball-close{
 
     text-align: center;
     font-family: 'Courgette', cursive;
-    font-size: 50px;
+    font-size: 60px;
     z-index: 100;
 }
-.content-box#login .content-text{ color: var(--color-2-1); }
+.content-box#login .content-text{ color: var(--color-3); }
 .content-box#todolist .content-text{ color: var(--color-4); }
 .content-box#game .content-text{ color: var(--color-2); }
 
