@@ -1,5 +1,7 @@
-element{
-    --color-1 : #f89b37;
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+
+:root{
+    --color-1 : #FFFAF5;
     --color-2 : #F2CC64;
     --color-3 : #9ABECF;
     --color-4 : #3960A1;
@@ -17,9 +19,12 @@ html {
 }
 
 body {
-    font-family: poppins;
+    /* position: relative; */
+    width: 100vw;
+    height: 100vh;
+    /* overflow: hidden; */
+    background-color: var(--color-1);
 }
-
 
 a {
     text-decoration: none;
@@ -29,17 +34,77 @@ a {
 
 .preload * {
     transition: none !important;
-}       
+}
 
-.main-page{
-    width: 100vw;
-    height: 100vh;
+.banner-text{
+    position: fixed;
+    text-align: center;
+    font-size: 60px;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%,0%);
+    font-family: 'Courgette', cursive;
+    color: var(--color-5);
+
+    z-index: 3;
+}
+
+.content-ball{
+    position: fixed;
+
+    width: 100px;
+    height: 100px;
+
+    border-radius: 100%;
+    outline: 0;
+    border: none;
+
+    z-index: 1;
+    transition: width 0.5s ease-in,
+    height 0.5s ease-in,
+    transform 0.5s ease-in,
+    z-index 0s 0.5s;
+}
+
+.content-ball.stretch{
+    width: 200vmax;
+    height: 200vmax;
+    transform: translate(-100vmax, -100vmax);
     
-    background-color: var(--color-1);
-    overflow: hidden;
+    z-index: 2;
+    transition: width 0.5s ease-out,
+    height 0.5s ease-out,
+    transform 0.5s ease-out,
+    z-index 0s;
+}
+
+button[value=login]{
+    top: 60%;
+    left: calc(30% - 50px);
+    background-color: var(--color-2);
+}
+
+button[value=todolist]{
+    top: 60%;
+    left: calc(50% - 50px);
+    background-color: var(--color-3);
+}
+
+button[value=game]{
+    top: 60%;
+    left: calc(70% - 50px);
+    background-color: var(--color-4);
 }
 
 
+.content-box{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
 
-/* about area */
+    background: var(--color-1);
 
+    display: none;
+}
