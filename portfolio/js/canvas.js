@@ -7,7 +7,7 @@ var animations = [];
 var circles = [];
 var noMoving = 0;
 var currentTimeout = 0;
-// var pop = new Audio('pop.wav');
+var pop = new Audio('pop.wav');
 
 var colorPicker = (function () {
     var colors = ["#ffeaa7", "#fab1a0", "#74b9ff", "#55efc4"];
@@ -59,7 +59,6 @@ function handleEvent(e) {
     var minCoverDuration = 750;
 
     if(!e.isFaux) noMoving = 0;
-    let pop = new Audio('pop.wav');
     pop.play();
 
     var pageFill = new Circle({
